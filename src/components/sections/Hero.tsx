@@ -4,13 +4,25 @@ import { FiPhone, FiCheckCircle } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
-const Hero = () => {
+interface HeroProps {
+    title?: React.ReactNode;
+    subtitle?: string;
+    backgroundImage?: string;
+    description?: string;
+}
+
+const Hero = ({
+    title = <>Restoration Services in New York <br className="hidden md:block" /> <span className="text-secondary">24/7 Emergency Response</span></>,
+    subtitle,
+    backgroundImage = "/images/herosection.webp",
+    description = "We restore your property and peace of mind. Professional water, fire, and mold remediation services available when you need them most."
+}: HeroProps) => {
     return (
         <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center pt-20">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/herosection.webp"
+                    src={backgroundImage}
                     alt="Restoration Services"
                     fill
                     className="object-cover object-center brightness-[0.4]"
@@ -21,12 +33,11 @@ const Hero = () => {
 
             <Container className="relative z-10 text-center text-white pb-16">
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
-                    Restoration Services in New York <br className="hidden md:block" />
-                    <span className="text-secondary">24/7 Emergency Response</span>
+                    {title}
                 </h1>
 
                 <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow-sm font-light">
-                    We restore your property and peace of mind. Professional water, fire, and mold remediation services available when you need them most.
+                    {description}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

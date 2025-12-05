@@ -4,11 +4,19 @@ import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 import Container from '../ui/Container';
 
-const services = [
+export interface ServiceItem {
+    title: string;
+    description: string;
+    image: string;
+    link?: string;
+}
+
+const defaultServices: ServiceItem[] = [
     {
         title: 'Water Damage Restoration',
         description: 'Rapid water extraction, drying, and dehumidification to prevent structural damage and mold growth.',
         image: '/images/waterdamagerestoration.webp',
+        link: '/services/water-damage',
     },
     {
         title: 'Fire Damage Repair',
@@ -37,14 +45,24 @@ const services = [
     },
 ];
 
-const Services = () => {
+interface ServicesProps {
+    title?: string;
+    description?: string;
+    services?: ServiceItem[];
+}
+
+const Services = ({
+    title = "Our Services",
+    description = "We offer a full range of restoration services to help you recover from any disaster.",
+    services = defaultServices
+}: ServicesProps) => {
     return (
         <section id="services" className="py-20 bg-gray-50">
             <Container>
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">{title}</h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        We offer a full range of restoration services to help you recover from any disaster.
+                        {description}
                     </p>
                 </div>
 
@@ -71,7 +89,7 @@ const Services = () => {
                                     {service.description}
                                 </p>
                                 <Link
-                                    href="#contact"
+                                    href={service.link || "#contact"}
                                     className="inline-flex items-center font-semibold text-secondary hover:text-orange-700 transition-colors"
                                 >
                                     Learn More <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />

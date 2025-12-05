@@ -28,7 +28,7 @@ const EmergencyBanner = () => {
                     <div className="flex-shrink-0">
                         <Button
                             href="tel:+15551234567"
-                            className="bg-white text-red-600 hover:bg-gray-100 hover:text-red-700 text-xl px-10 py-5 shadow-lg border-2 border-transparent hover:border-red-200"
+                            className="!bg-white !text-red-600 hover:!bg-gray-100 hover:!text-red-700 text-xl px-10 py-5 shadow-lg border-2 border-transparent hover:border-red-200"
                             icon={FiPhone}
                         >
                             (555) 123-4567

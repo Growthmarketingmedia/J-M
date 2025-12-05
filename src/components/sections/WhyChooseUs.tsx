@@ -1,8 +1,15 @@
 import React from 'react';
 import { FiClock, FiAward, FiShield, FiTool } from 'react-icons/fi';
+import { IconType } from 'react-icons';
 import Container from '../ui/Container';
 
-const features = [
+export interface FeatureItem {
+    icon: IconType;
+    title: string;
+    description: string;
+}
+
+const defaultFeatures: FeatureItem[] = [
     {
         icon: FiClock,
         title: '24/7 Emergency Response',
@@ -25,14 +32,24 @@ const features = [
     },
 ];
 
-const WhyChooseUs = () => {
+interface WhyChooseUsProps {
+    title?: string;
+    description?: string;
+    features?: FeatureItem[];
+}
+
+const WhyChooseUs = ({
+    title = "Why Choose Restoration Pro?",
+    description = "When disaster strikes, you need a partner you can trust. Here is what sets us apart from the competition.",
+    features = defaultFeatures
+}: WhyChooseUsProps) => {
     return (
         <section id="why-us" className="py-20 bg-gray-900 text-white">
             <Container>
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Restoration Pro?</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        When disaster strikes, you need a partner you can trust. Here is what sets us apart from the competition.
+                        {description}
                     </p>
                 </div>
 
