@@ -1,0 +1,195 @@
+'use client';
+
+import React, { useState } from 'react';
+import { FiMapPin, FiPhone, FiMail, FiClock, FiSend } from 'react-icons/fi';
+import Button from '../ui/Button';
+import Container from '../ui/Container';
+
+const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        service: 'Water Damage',
+        message: '',
+    });
+
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('submitting');
+
+        // Simulate API call
+        setTimeout(() => {
+            setStatus('success');
+            setFormData({ name: '', email: '', phone: '', service: 'Water Damage', message: '' });
+            setTimeout(() => setStatus('idle'), 5000); // Reset after 5s
+        }, 1500);
+    };
+
+    return (
+        <section id="contact" className="py-20 bg-gray-50">
+            <Container>
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Your Free Quote Today</h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        Don't let damage spread. Contact us now for a rapid response and professional assessment.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
+                    {/* Contact Info */}
+                    <div className="bg-gray-900 text-white p-10 md:p-14 flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
+                            <ul className="space-y-6">
+                                <li className="flex items-start">
+                                    <FiMapPin className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
+                                    <div>
+                                        <span className="block font-semibold text-lg">Headquarters</span>
+                                        <span className="text-gray-400">123 Restoration Way, Suite 100<br />New York, NY 10001</span>
+                                    </div>
+                                </li>
+                                <li className="flex items-start">
+                                    <FiPhone className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
+                                    <div>
+                                        <span className="block font-semibold text-lg">Phone</span>
+                                        <a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors">(555) 123-4567</a>
+                                    </div>
+                                </li>
+                                <li className="flex items-start">
+                                    <FiMail className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
+                                    <div>
+                                        <span className="block font-semibold text-lg">Email</span>
+                                        <a href="mailto:info@restorationpro.com" className="text-gray-400 hover:text-white transition-colors">info@restorationpro.com</a>
+                                    </div>
+                                </li>
+                                <li className="flex items-start">
+                                    <FiClock className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
+                                    <div>
+                                        <span className="block font-semibold text-lg">Hours</span>
+                                        <span className="text-gray-400">24 Hours / 7 Days A Week</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="mt-12">
+                            {/* Embed map or extra info could go here */}
+                            <div className="p-6 bg-gray-800 rounded-xl">
+                                <p className="text-sm text-gray-300 italic">
+                                    "Fastest response time in the industry. We are here when you need us most."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Contact Form */}
+                    <div className="p-10 md:p-14">
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="John Doe"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        required
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="(555) 123-4567"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    placeholder="john@example.com"
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
+                                <select
+                                    id="service"
+                                    name="service"
+                                    value={formData.service}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white"
+                                >
+                                    <option>Water Damage Restoration</option>
+                                    <option>Fire Damage Repair</option>
+                                    <option>Mold Remediation</option>
+                                    <option>Flood Restoration</option>
+                                    <option>Storm Damage</option>
+                                    <option>Other / General Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows={4}
+                                    required
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
+                                    placeholder="Tell us about the damage..."
+                                ></textarea>
+                            </div>
+
+                            <div className="pt-2">
+                                <Button
+                                    type="submit"
+                                    className={`w-full text-lg ${status === 'success' ? 'bg-success hover:bg-green-600' : ''}`}
+                                    icon={status === 'success' ? undefined : FiSend}
+                                    variant={status === 'success' ? 'primary' : 'primary'} // Visual feedback handled by className
+                                // disabled={status === 'submitting' || status === 'success'}
+                                >
+                                    {status === 'submitting' ? 'Sending...' : status === 'success' ? 'Message Sent!' : 'Send Message'}
+                                </Button>
+                                {status === 'success' && (
+                                    <p className="text-center text-success mt-3 font-medium animate-pulse">
+                                        Thank you! We'll be in touch shortly.
+                                    </p>
+                                )}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </Container>
+        </section>
+    );
+};
+
+export default Contact;
