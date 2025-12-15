@@ -2,7 +2,7 @@ import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Stats from "@/components/sections/Stats";
-import ServiceAreas from "@/components/sections/ServiceAreas";
+
 import Testimonials from "@/components/sections/Testimonials";
 import Process from "@/components/sections/Process";
 import EmergencyBanner from "@/components/sections/EmergencyBanner";
@@ -21,7 +21,7 @@ export default function Home() {
       <InsuranceSlider />
       <Process />
       <Testimonials />
-      <ServiceAreas />
+
       <Contact />
       <MapSection />
     </div>
