@@ -5,23 +5,23 @@ import Container from '../ui/Container';
 const steps = [
     {
         icon: FiPhoneCall,
-        title: '1. Contact Us',
-        description: 'Call our 24/7 hotline. We will gather initial details and dispatch a team immediately.',
+        title: '1. Emergency Response & Inspection',
+        description: 'Our team responds promptly to assess the situation and contain any immediate hazards. During the inspection, we identify all areas affected by the damage and develop a targeted restoration plan tailored to your property\'s unique needs.',
     },
     {
         icon: FiClipboard,
-        title: '2. Assessment',
-        description: 'We inspect the damage, provide a free estimate, and outline the restoration plan.',
+        title: '2. Water Extraction & Drying (if applicable)',
+        description: 'If water damage is involved, we use industrial-grade pumps and dehumidifiers to remove standing water and moisture. This step is critical in preventing secondary damage such as mold growth, structural weakening, and long-term indoor air quality issues.',
     },
     {
         icon: FiRefreshCw,
-        title: '3. Restoration',
-        description: 'Our certified techs work quickly to extract, dry, clean, and repair your property.',
+        title: '3. Cleaning & Sanitization',
+        description: 'We thoroughly clean, disinfect, and deodorize all affected surfaces, materials, and belongings. This ensures a safe and healthy environment, free from contaminants, odors, and potential allergens that may linger after the initial damage has been addressed.',
     },
     {
         icon: FiCheckSquare,
-        title: '4. Completion',
-        description: 'We conduct a final walkthrough with you to ensure your complete satisfaction.',
+        title: '4. Restoration & Repairs',
+        description: 'The final stage focuses on returning your property to its original condition. From rebuilding damaged structures to repainting and finishing details, we handle all necessary repairs to restore comfort, functionality, and value to your space.',
     },
 ];
 
@@ -30,9 +30,9 @@ const Process = () => {
         <section className="py-20 bg-white">
             <Container>
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Simple 4-Step Process</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Our Process Works</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        We handle everything from the initial call to the final cleanup, making the restoration process as stress-free as possible.
+                        At Quick Response Restoration, our approach is designed to make recovery as efficient and stress-free as possible. We follow a structured process that ensures every detail is addressed and your property is restored thoroughly from start to finish.
                     </p>
                 </div>
 

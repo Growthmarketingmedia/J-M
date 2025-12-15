@@ -5,10 +5,17 @@ import { FiMapPin, FiPhone, FiMail, FiClock, FiSend } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
-const Contact = () => {
+interface ContactProps {
+    title?: string;
+    description?: string;
+}
+
+const Contact = ({
+    title = "Get Fast, Reliable Restoration Services Today!",
+    description = "If your home or business has suffered damage, don't wait to act. Quick Response Restoration is the trusted name for Professional Restoration Services in Colorado Springs and is ready to help you recover quickly. Call us today and let our experienced team restore your property with skill and care."
+}: ContactProps) => {
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
         phone: '',
         service: 'Water Damage',
         message: '',
@@ -28,7 +35,7 @@ const Contact = () => {
         // Simulate API call
         setTimeout(() => {
             setStatus('success');
-            setFormData({ name: '', email: '', phone: '', service: 'Water Damage', message: '' });
+            setFormData({ name: '', phone: '', service: 'Water Damage', message: '' });
             setTimeout(() => setStatus('idle'), 5000); // Reset after 5s
         }, 1500);
     };
@@ -37,9 +44,9 @@ const Contact = () => {
         <section id="contact" className="py-20 bg-gray-50">
             <Container>
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Your Free Quote Today</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Don't let damage spread. Contact us now for a rapid response and professional assessment.
+                        {description}
                     </p>
                 </div>
 
@@ -53,23 +60,17 @@ const Contact = () => {
                                     <FiMapPin className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
                                         <span className="block font-semibold text-lg">Headquarters</span>
-                                        <span className="text-gray-400">123 Restoration Way, Suite 100<br />New York, NY 10001</span>
+                                        <span className="text-gray-400">Colorado Springs, CO</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start">
                                     <FiPhone className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
                                         <span className="block font-semibold text-lg">Phone</span>
-                                        <a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors">(555) 123-4567</a>
+                                        <a href="tel:+19152683375" className="text-gray-400 hover:text-white transition-colors">(915) 268-3375</a>
                                     </div>
                                 </li>
-                                <li className="flex items-start">
-                                    <FiMail className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
-                                    <div>
-                                        <span className="block font-semibold text-lg">Email</span>
-                                        <a href="mailto:info@restorationpro.com" className="text-gray-400 hover:text-white transition-colors">info@restorationpro.com</a>
-                                    </div>
-                                </li>
+
                                 <li className="flex items-start">
                                     <FiClock className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
@@ -117,24 +118,12 @@ const Contact = () => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                        placeholder="(555) 123-4567"
+                                        placeholder="(915) 268-3375"
                                     />
                                 </div>
                             </div>
 
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                    placeholder="john@example.com"
-                                />
-                            </div>
+
 
                             <div>
                                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>

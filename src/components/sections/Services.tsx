@@ -14,34 +14,27 @@ export interface ServiceItem {
 const defaultServices: ServiceItem[] = [
     {
         title: 'Water Damage Restoration',
-        description: 'Rapid water extraction, drying, and dehumidification to prevent structural damage and mold growth.',
+        description: 'Water damage occurs quickly, leading to structural damage and health risks. Our team will determine where the water is coming from, extract the standing water, and deploy the latest drying technology to remove the moisture. We follow this process with all secondary issues associated with water damage, such as odor and mold.',
         image: '/images/waterdamagerestoration.webp',
-        link: '/services/water-damage',
+        link: '/water-damage-restoration',
     },
     {
-        title: 'Fire Damage Repair',
-        description: 'Comprehensive fire and smoke damage restoration, including soot removal and structural repairs.',
+        title: 'Fire & Smoke Damage Restoration',
+        description: 'Fire damage is a long-lasting outcome; in addition to property damage, there are fire losses represented, such as smoke and residue. Our specialists will handle debris removal, extensive cleaning, odor neutralization, etc. We highlight hidden damage that soot and corrosion cause to a safe, clean, and structurally sound environment for habitation.',
         image: '/images/firedamagerestoration.webp',
+        link: '/fire-damage-restoration',
     },
     {
-        title: 'Mold Remediation',
-        description: 'Safe and effective mold inspection, testing, and removal to ensure healthy indoor air quality.',
+        title: 'Mold Removal & Remediation',
+        description: 'Unchecked mold can spread rapidly and cause long-term issues to your property and your health. Our certified specialists use best practice containment, removal, and remediation methods to effectively eliminate mold from its source. We will implement moisture control strategies to limit the likelihood of the mold returning.',
         image: '/images/mold.webp',
+        link: '/mold-damage-restoration',
     },
     {
-        title: 'Flood Restoration',
-        description: 'Emergency flood cleanup for basements and properties affected by storms or burst pipes.',
+        title: 'Reconstruction & Structural Repairs',
+        description: 'Structural repair often includes more than just cleanup. Our experienced construction team will repair or replace damaged areas to restore strength, safety, and aesthetic appeal to your property. From drywall, flooring to reconstruction, we will manage all areas of structural repair of the property.',
         image: '/images/waterdamagerestorationonwalls.webp',
-    },
-    {
-        title: 'Storm Damage',
-        description: 'Fast response for roof leaks, wind damage, and debris cleanup after severe weather.',
-        image: '/images/stormdamage.webp',
-    },
-    {
-        title: 'Emergency Services',
-        description: '24/7 board-up, tarping, and stabilization services to secure your property immediately.',
-        image: '/images/molddamageworkers.webp',
+        link: '/reconstruction-services',
     },
 ];
 
@@ -52,8 +45,8 @@ interface ServicesProps {
 }
 
 const Services = ({
-    title = "Our Services",
-    description = "We offer a full range of restoration services to help you recover from any disaster.",
+    title = "Our Restoration Services",
+    description = "As a premier Property Restoration Specialist in Colorado Springs, we provide a complete range of solutions to restore your property quickly and efficiently. From flooding due to a broken pipe, mold after long-term moisture, and fire and smoke damage, we have the experience and proper equipment to provide the restoration needed.",
     services = defaultServices
 }: ServicesProps) => {
     return (
@@ -66,7 +59,7 @@ const Services = ({
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}

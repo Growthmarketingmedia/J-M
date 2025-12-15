@@ -9,16 +9,18 @@ interface HeroProps {
     subtitle?: string;
     backgroundImage?: string;
     description?: string;
+    secondaryButtonHref?: string;
 }
 
 const Hero = ({
-    title = <>Restoration Services in New York <br className="hidden md:block" /> <span className="text-secondary">24/7 Emergency Response</span></>,
+    title = <>From Ruin to Restoration: <br className="hidden md:block" /> <span className="text-secondary">Professional Restoration Colorado Springs Services That Bring Properties Back to Life</span></>,
     subtitle,
     backgroundImage = "/images/herosection.webp",
-    description = "We restore your property and peace of mind. Professional water, fire, and mold remediation services available when you need them most."
+    description = "In a disaster, every moment counts. Quick Response Restoration provides reliable 24-hour-a-day service to restore your property as fast as possible. As a premier Property Restoration Company in Colorado Springs, we deploy our expertise, state-of-the-art technology, and skilled professionals to manage any emergency with efficiency and compassion.",
+    secondaryButtonHref = "#contact"
 }: HeroProps) => {
     return (
-        <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center pt-20">
+        <section className="relative flex items-center justify-center pt-32 pb-20">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -31,12 +33,12 @@ const Hero = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-900/40" />
             </div>
 
-            <Container className="relative z-10 text-center text-white pb-16">
+            <Container className="relative z-10 text-center text-white">
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
                     {title}
                 </h1>
 
-                <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow-sm font-light">
+                <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-5xl mx-auto drop-shadow-sm font-light">
                     {description}
                 </p>
 
@@ -44,14 +46,14 @@ const Hero = ({
                     <Button
                         variant="secondary"
                         icon={FiPhone}
-                        href="tel:+15551234567"
+                        href="tel:+19152683375"
                         className="w-full sm:w-auto text-lg px-8 py-4"
                     >
-                        Call Now: (555) 123-4567
+                        Call Now: (915) 268-3375
                     </Button>
                     <Button
                         variant="outline"
-                        href="#contact"
+                        href={secondaryButtonHref}
                         className="w-full sm:w-auto text-lg px-8 py-4"
                     >
                         Get Free Quote

@@ -7,6 +7,8 @@ import Testimonials from "@/components/sections/Testimonials";
 import Process from "@/components/sections/Process";
 import EmergencyBanner from "@/components/sections/EmergencyBanner";
 import Contact from "@/components/sections/Contact";
+import MapSection from "@/components/sections/MapSection";
+import InsuranceSlider from "@/components/sections/InsuranceSlider";
 
 export default function Home() {
   return (
@@ -16,10 +18,12 @@ export default function Home() {
       <Services />
       <EmergencyBanner />
       <WhyChooseUs />
+      <InsuranceSlider />
       <Process />
       <Testimonials />
       <ServiceAreas />
       <Contact />
+      <MapSection />
     </div>
   );
 }
