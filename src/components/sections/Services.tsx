@@ -15,26 +15,26 @@ const defaultServices: ServiceItem[] = [
     {
         title: 'Water Damage Restoration',
         description: 'Water damage occurs quickly, leading to structural damage and health risks. Our team will determine where the water is coming from, extract the standing water, and deploy the latest drying technology to remove the moisture. We follow this process with all secondary issues associated with water damage, such as odor and mold.',
-        image: '/images/waterdamagerestoration.webp',
+        image: '/images/water/water-damage-restoration-5.png',
         link: '/water-damage-restoration',
     },
     {
         title: 'Fire & Smoke Damage Restoration',
         description: 'Fire damage is a long-lasting outcome; in addition to property damage, there are fire losses represented, such as smoke and residue. Our specialists will handle debris removal, extensive cleaning, odor neutralization, etc. We highlight hidden damage that soot and corrosion cause to a safe, clean, and structurally sound environment for habitation.',
-        image: '/images/firedamagerestoration.webp',
+        image: '/images/Fire/fire-damage-restoration-3.png',
         link: '/fire-damage-restoration',
     },
     {
         title: 'Mold Removal & Remediation',
         description: 'Unchecked mold can spread rapidly and cause long-term issues to your property and your health. Our certified specialists use best practice containment, removal, and remediation methods to effectively eliminate mold from its source. We will implement moisture control strategies to limit the likelihood of the mold returning.',
-        image: '/images/mold.webp',
+        image: '/images/mold/mold-remediation-3.png',
         link: '/mold-damage-restoration',
     },
     {
         title: 'Reconstruction & Structural Repairs',
         description: 'Structural repair often includes more than just cleanup. Our experienced construction team will repair or replace damaged areas to restore strength, safety, and aesthetic appeal to your property. From drywall, flooring to reconstruction, we will manage all areas of structural repair of the property.',
-        image: '/images/waterdamagerestorationonwalls.webp',
-        link: '/reconstruction-services',
+        image: '/images/reconstruction/reconstruction-service-3.png',
+        link: '/reconstruction',
     },
 ];
 

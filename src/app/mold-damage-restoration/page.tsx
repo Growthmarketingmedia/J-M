@@ -110,7 +110,7 @@ export default function MoldRemediationPage() {
             {/* Hero Section */}
             <Hero
                 title={<>From Hidden Mold to Healthy Homes, <br className="hidden md:block" /> <span className="text-secondary">Expert Mold Removal Company Colorado Springs Residents Depend On</span></>}
-                backgroundImage="/images/mold.webp"
+                backgroundImage="/images/mold/mold-remediation-1.png"
                 description="When mold takes hold in your property, the damage often runs deeper than what is visible. At Quick Response Restoration, our expertise lies in identifying and removing the mold itself and addressing the conditions that created the mold to grow in the first place. Our trained professionals use technology and techniques that are proven to find hidden colonies and to remove them at the source. No matter if the problem was due to humidity, plumbing leaks, or a lack of ventilation, our solutions are based on your individual needs. As one of the leading Colorado Springs Mold Removal Companies, we restore your property and protect your health, using precision, care, and long-term prevention. When searching for 'Mold Remediation Near Me,' trust the local experts who are committed to ensuring that the highest level of professionalism and care are provided for a lasting result."
             />
 
@@ -161,7 +161,7 @@ export default function MoldRemediationPage() {
                         </div>
                         <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                             <img
-                                src="/images/moldremoval.webp"
+                                src="/images/mold/mold-remediation-2.png"
                                 alt="Mold removal"
                                 className="w-full h-full object-cover"
                             />

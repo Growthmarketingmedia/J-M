@@ -120,7 +120,7 @@ export default function ReconstructionPage() {
             {/* Hero Section */}
             <Hero
                 title={<>From Ruins to Remarkable Spaces: <br className="hidden md:block" /> <span className="text-secondary">Colorado Springs Reconstruction Company You Can Truly Trust</span></>}
-                backgroundImage="/images/herosection.webp"
+                backgroundImage="/images/reconstruction/reconstruction-service-1.png"
                 description="When disaster strikes, restoring your property requires more than a quick repair. At Quick Response Restoration, we offer professional reconstruction services in Colorado Springs that rehabilitate homes and businesses needing work after an extensive loss. Whether it's a result of fire, water intrusion, storm damage, or mold issues, our talented team stands poised for the restoration of your property with care and precision. Each project will be supervised by a licensed contractor who understands both structural integrity and quality craftsmanship. We recognize that when property is damaged, families and businesses are often left reeling with the effects. That's why we not only provide 24-hour, 7-day-a-week service and expedient responses to emergencies, but we also customize the restoration solution to suit the needs of your project. Restoration is our mission."
             />
 
@@ -171,7 +171,7 @@ export default function ReconstructionPage() {
                         </div>
                         <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                             <img
-                                src="/images/firedamage.webp"
+                                src="/images/reconstruction/reconstruction-service-2.png"
                                 alt="Reconstruction services"
                                 className="w-full h-full object-cover"
                             />

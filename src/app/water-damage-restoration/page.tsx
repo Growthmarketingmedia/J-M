@@ -166,7 +166,7 @@ export default function WaterDamagePage() {
             {/* Hero Section */}
             <Hero
                 title={<>From Sudden Leaks to Lasting Repairs, <br className="hidden md:block" /> <span className="text-secondary">Complete Water Damage Restoration in Colorado Springs</span></>}
-                backgroundImage="/images/waterdamagerestoration.webp"
+                backgroundImage="/images/water/water-damage-restoration-1.png"
                 description="When facing flooding, pipe bursting, and leaks, every minute matters! Quick Response Restoration provides trustworthy water damage restoration in Colorado Springs, and we can take pride in restoring homes and businesses with our passionate care, accuracy, and knowledge. Our years of local experience and top-of-the-line equipment are essential to protecting property from more damage."
             />
 
@@ -209,7 +209,7 @@ export default function WaterDamagePage() {
                         </div>
                         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                             <img
-                                src="/images/waterdamagerestorationonwalls.webp"
+                                src="/images/water/water-damage-restoration-2.png"
                                 alt="Water damage on walls"
                                 className="w-full h-full object-cover"
                             />
@@ -224,7 +224,7 @@ export default function WaterDamagePage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1">
                             <img
-                                src="/images/waterdamagerestoration.webp"
+                                src="/images/water/water-damage-restoration-3.png"
                                 alt="Water damage restoration"
                                 className="w-full h-full object-cover"
                             />
@@ -309,7 +309,7 @@ export default function WaterDamagePage() {
                         </div>
                         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                             <img
-                                src="/images/molddamageworkers.webp"
+                                src="/images/water/water-damage-restoration-4.png"
                                 alt="Professional restoration workers"
                                 className="w-full h-full object-cover"
                             />
@@ -334,8 +334,8 @@ export default function WaterDamagePage() {
                                     <button
                                         onClick={() => setOpenFaq(openFaq === index ? null : index)}
                                         className={`w-full px-8 py-6 text-left flex items-center justify-between transition-colors ${openFaq === index
-                                                ? 'bg-white text-gray-900'
-                                                : 'hover:bg-gray-50'
+                                            ? 'bg-white text-gray-900'
+                                            : 'hover:bg-gray-50'
                                             }`}
                                     >
                                         <span className="text-lg font-bold pr-8">{faq.question}</span>
