@@ -165,7 +165,7 @@ export default function DenverWaterDamagePage() {
             {/* Hero Section */}
             <Hero
                 title={<>Turn the Tide on Water Damage with <br className="hidden md:block" /> <span>Denver's Fastest and Most Trusted Restoration Team</span></>}
-                backgroundImage="/images/waterdamagerestoration.webp"
+                backgroundImage="/images/water/water-damage-restoration-6.png"
                 description="Time is your greatest ally when your property is affected by unforeseen flooding, burst pipes, or hidden leaks. Quick Response Restoration provides you with reliable water damage restoration in Denver, performing our work with haste, accuracy, and the utmost concern for what matters. Our team possesses years of real-life experience locally, along with the latest technology in restoration, to protect homes and businesses against additional damage and reconstruction with durability and care."
             />
 
