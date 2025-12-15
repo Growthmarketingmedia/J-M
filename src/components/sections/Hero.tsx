@@ -34,7 +34,7 @@ const Hero = ({
             </div>
 
             <Container className="relative z-10 text-center text-white">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
+                <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-[1.1] drop-shadow-md">
                     {title}
                 </h1>
 
