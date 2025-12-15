@@ -13,7 +13,7 @@ interface HeroProps {
 }
 
 const Hero = ({
-    title = <>From Ruin to Restoration: <br className="hidden md:block" /> <span className="text-secondary">Professional Restoration Colorado Springs Services That Bring Properties Back to Life</span></>,
+    title = <>From Ruin to Restoration: <br className="hidden md:block" /> <span>Professional Restoration Colorado Springs Services That Bring Properties Back to Life</span></>,
     subtitle,
     backgroundImage = "/images/herosection.webp",
     description = "In a disaster, every moment counts. Quick Response Restoration provides reliable 24-hour-a-day service to restore your property as fast as possible. As a premier Property Restoration Company in Colorado Springs, we deploy our expertise, state-of-the-art technology, and skilled professionals to manage any emergency with efficiency and compassion.",

@@ -118,7 +118,7 @@ export default function FireDamagePage() {
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
             <Hero
-                title={<>From Fire Damage to Lasting Strength, <br className="hidden md:block" /> <span className="text-secondary">Expert Fire & Smoke Damage Restoration Colorado Springs Residents Trust</span></>}
+                title={<>From Fire Damage to Lasting Strength, <br className="hidden md:block" /> <span>Expert Fire & Smoke Damage Restoration Colorado Springs Residents Trust</span></>}
                 backgroundImage="/images/Fire/fire-damage-restoration-1.png"
                 description="Fire can change everything in seconds, creating a catastrophic loss that is hard to recover from. Quick Response Restoration provides professional fire damage restoration in Colorado Springs. Our experts know that fire damage goes beyond burns; it also involves smoke, water from fighting the fire, and structural safety concerns. That is why we focus on safety first, then complete restoration of the property. From securing your home to removing residual smoke to reconstructing the structure, it is our goal to restore strength and comfort to your environment. We use state-of-the-art equipment, extensive investigations, and proven techniques to ensure there is no oversight as we work. With our local team ready when you need a fire damage restoration company near me, residents and businesses in Colorado Springs can rely on professional fire recovery services that emphasize effective and long-lasting improvement."
             />

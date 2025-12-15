@@ -89,7 +89,7 @@ export default function DenverLocationPage() {
         <div className="flex flex-col min-h-screen">
             {/* Hero Section - Same as Service Pages */}
             <Hero
-                title={<>Turning Devastation into Renewal, <br className="hidden md:block" /> <span className="text-secondary">Denver's Trusted Property Restoration Company</span></>}
+                title={<>Turning Devastation into Renewal, <br className="hidden md:block" /> <span>Denver's Trusted Property Restoration Company</span></>}
                 backgroundImage="/images/herosection.webp"
                 description="When disaster happens, time is everything. Quick Response Restoration offers reliable 24-hour service to get your property back to its original condition in no time. As an industry leader in Property Restoration in Denver we combine experience, technology and caring people who are ready to handle any emergency with precision and care."
             />

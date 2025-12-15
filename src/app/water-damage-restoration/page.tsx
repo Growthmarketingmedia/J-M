@@ -165,7 +165,7 @@ export default function WaterDamagePage() {
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
             <Hero
-                title={<>From Sudden Leaks to Lasting Repairs, <br className="hidden md:block" /> <span className="text-secondary">Complete Water Damage Restoration in Colorado Springs</span></>}
+                title={<>From Sudden Leaks to Lasting Repairs, <br className="hidden md:block" /> <span>Complete Water Damage Restoration in Colorado Springs</span></>}
                 backgroundImage="/images/water/water-damage-restoration-1.png"
                 description="When facing flooding, pipe bursting, and leaks, every minute matters! Quick Response Restoration provides trustworthy water damage restoration in Colorado Springs, and we can take pride in restoring homes and businesses with our passionate care, accuracy, and knowledge. Our years of local experience and top-of-the-line equipment are essential to protecting property from more damage."
             />

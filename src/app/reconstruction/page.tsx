@@ -119,7 +119,7 @@ export default function ReconstructionPage() {
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
             <Hero
-                title={<>From Ruins to Remarkable Spaces: <br className="hidden md:block" /> <span className="text-secondary">Colorado Springs Reconstruction Company You Can Truly Trust</span></>}
+                title={<>From Ruins to Remarkable Spaces: <br className="hidden md:block" /> <span>Colorado Springs Reconstruction Company You Can Truly Trust</span></>}
                 backgroundImage="/images/reconstruction/reconstruction-service-1.png"
                 description="When disaster strikes, restoring your property requires more than a quick repair. At Quick Response Restoration, we offer professional reconstruction services in Colorado Springs that rehabilitate homes and businesses needing work after an extensive loss. Whether it's a result of fire, water intrusion, storm damage, or mold issues, our talented team stands poised for the restoration of your property with care and precision. Each project will be supervised by a licensed contractor who understands both structural integrity and quality craftsmanship. We recognize that when property is damaged, families and businesses are often left reeling with the effects. That's why we not only provide 24-hour, 7-day-a-week service and expedient responses to emergencies, but we also customize the restoration solution to suit the needs of your project. Restoration is our mission."
             />
