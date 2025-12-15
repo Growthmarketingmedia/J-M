@@ -138,7 +138,7 @@ const Header = () => {
                     {/* CTA Button */}
                     <div className="hidden md:block">
                         <Button variant="secondary" icon={FiPhone} href="tel:+19152683375">
-                            Emergency: (915) 268-3375
+                            Call Now: (915) 268-3375
                         </Button>
                     </div>
 
