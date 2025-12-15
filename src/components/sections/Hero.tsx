@@ -20,7 +20,7 @@ const Hero = ({
     secondaryButtonHref = "#contact"
 }: HeroProps) => {
     return (
-        <section className="relative flex items-center justify-center pt-32 pb-20">
+        <section className="relative flex items-center justify-center pt-48 pb-20">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
