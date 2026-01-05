@@ -1,19 +1,18 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { FiMapPin, FiPhone, FiMail, FiClock, FiSend } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 interface ContactProps {
     title?: string;
     description?: string;
 }
 
-const Contact = ({
-    title = "Get Fast, Reliable Restoration Services Today!",
-    description = "If your home or business has suffered damage, don't wait to act. Quick Response Restoration is the trusted name for Professional Restoration Services in Colorado Springs and is ready to help you recover quickly. Call us today and let our experienced team restore your property with skill and care."
-}: ContactProps) => {
+const ContactFormContent = ({ title, description }: ContactProps) => {
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -28,17 +27,25 @@ const Contact = ({
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!executeRecaptcha) {
+            console.log('Execute recaptcha not yet available');
+            return;
+        }
+
         setStatus('submitting');
 
         try {
+            const token = await executeRecaptcha('contact_form_submit');
+
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, token }),
             });
 
             if (response.ok) {
@@ -52,7 +59,7 @@ const Contact = ({
             console.error('Error submitting form:', error);
             setStatus('error');
         }
-    };
+    }, [executeRecaptcha, formData]);
 
     return (
         <section id="contact" className="py-20 bg-gray-50">
@@ -137,8 +144,6 @@ const Contact = ({
                                 </div>
                             </div>
 
-
-
                             <div>
                                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
                                 <select
@@ -192,6 +197,17 @@ const Contact = ({
                 </div>
             </Container>
         </section>
+    );
+};
+
+const Contact = ({
+    title = "Get Fast, Reliable Restoration Services Today!",
+    description = "If your home or business has suffered damage, don't wait to act. Quick Response Restoration is the trusted name for Professional Restoration Services in Colorado Springs and is ready to help you recover quickly. Call us today and let our experienced team restore your property with skill and care."
+}: ContactProps) => {
+    return (
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}>
+            <ContactFormContent title={title} description={description} />
+        </GoogleReCaptchaProvider>
     );
 };
 
