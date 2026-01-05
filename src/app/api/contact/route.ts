@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, phone, service, message, token } = body;
+        const { name, email, phone, service, message, token } = body;
 
         // Verify ReCaptcha
         const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
@@ -25,12 +25,14 @@ export async function POST(request: Request) {
 
         const { data, error } = await resend.emails.send({
             from: 'Quick Response Contact <contact@send.quick2restore.com>',
-            to: ['amir@growthmarketingco.com'],
+            to: ['joel.grubbs@quick2restore.com'],
+            replyTo: email,
             subject: `New Contact Request: ${service}`,
             html: `
         <div>
           <h1>New Contact Form Submission</h1>
           <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Service Needed:</strong> ${service}</p>
           <p><strong>Message:</strong></p>
