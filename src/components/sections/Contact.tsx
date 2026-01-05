@@ -32,12 +32,26 @@ const Contact = ({
         e.preventDefault();
         setStatus('submitting');
 
-        // Simulate API call
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', phone: '', service: 'Water Damage', message: '' });
-            setTimeout(() => setStatus('idle'), 5000); // Reset after 5s
-        }, 1500);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', phone: '', service: 'Water Damage', message: '' });
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setStatus('error');
+        }
     };
 
     return (
