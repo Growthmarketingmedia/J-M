@@ -49,7 +49,7 @@ const Footer = () => {
                             <li><Link href="/water-damage-restoration" className="text-gray-400 hover:text-secondary">Water Damage Restoration</Link></li>
                             <li><Link href="/fire-damage-restoration" className="text-gray-400 hover:text-secondary">Fire Damage Restoration</Link></li>
                             <li><Link href="/mold-damage-restoration" className="text-gray-400 hover:text-secondary">Mold Damage Restoration</Link></li>
-                            <li><Link href="/reconstruction" className="text-gray-400 hover:text-secondary">Reconstruction</Link></li>
+                            <li><Link href="/reconstruction-services" className="text-gray-400 hover:text-secondary">Reconstruction</Link></li>
                             <li><Link href="/denver-co-water-damage" className="text-gray-400 hover:text-secondary">Denver Water Damage</Link></li>
                         </ul>
                     </div>

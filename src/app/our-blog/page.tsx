@@ -11,7 +11,7 @@ const blogPosts = [
     {
         title: 'Why Quick Response Matters: The Importance of 24/7 Water Damage Restoration',
         excerpt: 'Water damage is something that occurs every day, and the majority of the time, it will happen unexpectedly. Whether it occurs due to the unexpected failure of an appliance...',
-        slug: '/our-blog/why-quick-response-matters',
+        slug: '/f/why-quick-response-matters-the-importance-of-247-water-damage-r',
         image: '/images/24-7-water-damage-restoration.webp',
         date: 'December 15, 2025',
         readTime: '5 min read',

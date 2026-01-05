@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { FiMenu, FiX, FiPhone, FiChevronDown } from 'react-icons/fi';
 import Button from '../ui/Button';
@@ -11,6 +12,13 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const pathname = usePathname();
+
+    // Check if we are on a single blog post page (starts with /our-blog/ but is not the main blog page) OR the new /f/ path
+    const isBlogPost = (pathname?.startsWith('/our-blog/') && pathname !== '/our-blog') || pathname?.startsWith('/f/');
+
+    // Force solid header style if scrolled OR if on a blog post page
+    const shouldShowSolidHeader = isScrolled || isBlogPost;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,7 +43,7 @@ const Header = () => {
                 { name: 'Water Damage Restoration', href: '/water-damage-restoration' },
                 { name: 'Mold Damage Restoration', href: '/mold-damage-restoration' },
                 { name: 'Fire Damage Restoration', href: '/fire-damage-restoration' },
-                { name: 'Reconstruction', href: '/reconstruction' },
+                { name: 'Reconstruction', href: '/reconstruction-services' },
             ]
         },
         { name: 'Blog', href: '/our-blog' },
@@ -50,6 +58,7 @@ const Header = () => {
                         { name: 'Water Damage Restoration', href: '/denver-co-water-damage' }
                     ]
                 },
+                { name: 'Albuquerque | Santa Fe', href: '/albuquerque-santafe' },
             ]
         },
         { name: 'Contact', href: '/contact-us' },
@@ -57,7 +66,7 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/30 backdrop-blur-md border-b border-white/30 py-4'
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${shouldShowSolidHeader ? 'bg-white shadow-md py-2' : 'bg-white/30 backdrop-blur-md border-b border-white/30 py-4'
                 }`}
         >
             <Container>
@@ -70,7 +79,7 @@ const Header = () => {
                                 src="/images/transparentlogo.png"
                                 alt="Quick Response Restoration"
                                 fill
-                                className="object-contain object-left"
+                                className={`object-contain object-left ${shouldShowSolidHeader ? '' : 'brightness-0 invert'}`}
                                 priority
                             />
                         </div>
@@ -88,7 +97,7 @@ const Header = () => {
                                     >
                                         <Link
                                             href={link.href}
-                                            className={`text-base font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-gray-700' : 'text-gray-900 md:text-white'
+                                            className={`text-base font-medium transition-colors hover:text-secondary ${shouldShowSolidHeader ? 'text-gray-700' : 'text-gray-900 md:text-white'
                                                 } flex items-center`}
                                         >
                                             {link.name} <FiChevronDown className="ml-1" />
@@ -125,7 +134,7 @@ const Header = () => {
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-base font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-gray-700' : 'text-gray-900 md:text-white'
+                                        className={`text-base font-medium transition-colors hover:text-secondary ${shouldShowSolidHeader ? 'text-gray-700' : 'text-gray-900 md:text-white'
                                             }`}
                                     >
                                         {link.name}
@@ -148,9 +157,9 @@ const Header = () => {
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
                         {isMobileMenuOpen ? (
-                            <FiX className={isScrolled ? 'text-gray-900' : 'text-white'} />
+                            <FiX className={shouldShowSolidHeader ? 'text-gray-900' : 'text-white'} />
                         ) : (
-                            <FiMenu className={isScrolled ? 'text-gray-900' : 'text-white'} />
+                            <FiMenu className={shouldShowSolidHeader ? 'text-gray-900' : 'text-white'} />
                         )}
                     </button>
                 </div>

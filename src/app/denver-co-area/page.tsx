@@ -30,7 +30,7 @@ export default function DenverLocationPage() {
         {
             icon: MdConstruction,
             title: 'Reconstruction Services',
-            link: '/reconstruction',
+            link: '/reconstruction-services',
         },
     ];
 

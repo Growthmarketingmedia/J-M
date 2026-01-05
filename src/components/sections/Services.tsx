@@ -34,7 +34,7 @@ const defaultServices: ServiceItem[] = [
         title: 'Reconstruction & Structural Repairs',
         description: 'Structural repair often includes more than just cleanup. Our experienced construction team will repair or replace damaged areas to restore strength, safety, and aesthetic appeal to your property. From drywall, flooring to reconstruction, we will manage all areas of structural repair of the property.',
         image: '/images/reconstruction/reconstruction-service-3.png',
-        link: '/reconstruction',
+        link: '/reconstruction-services',
     },
 ];
 
