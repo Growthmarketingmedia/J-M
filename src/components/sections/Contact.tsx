@@ -15,6 +15,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [formData, setFormData] = useState({
         name: '',
+        email: '',
         phone: '',
         service: 'Water Damage',
         message: '',
@@ -50,7 +51,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
 
             if (response.ok) {
                 setStatus('success');
-                setFormData({ name: '', phone: '', service: 'Water Damage', message: '' });
+                setFormData({ name: '', email: '', phone: '', service: 'Water Damage', message: '' });
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
                 setStatus('error');
@@ -130,6 +131,19 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                     />
                                 </div>
                                 <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="john@example.com"
+                                    />
+                                </div>
+                                <div className="md:col-span-2">
                                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                                     <input
                                         type="tel"
