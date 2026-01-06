@@ -17,8 +17,8 @@ const Header = () => {
     // Check if we are on a single blog post page (starts with /our-blog/ but is not the main blog page) OR the new /f/ path
     const isBlogPost = (pathname?.startsWith('/our-blog/') && pathname !== '/our-blog') || pathname?.startsWith('/f/');
 
-    // Force solid header style if scrolled OR if on a blog post page
-    const shouldShowSolidHeader = isScrolled || isBlogPost;
+    // Force solid header style if scrolled OR if on a blog post page OR on Albuquerque page
+    const shouldShowSolidHeader = isScrolled || isBlogPost || pathname === '/albuquerque-santafe';
 
     useEffect(() => {
         const handleScroll = () => {
