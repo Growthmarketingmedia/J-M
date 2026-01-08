@@ -40,8 +40,8 @@ const MapSection = () => {
                     {/* Phone */}
                     <div className="bg-white rounded-xl p-6 shadow-md text-center">
                         <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">Phone</h3>
-                        <a href="tel:+19152683375" className="text-gray-900 font-medium hover:text-secondary transition-colors">
-                            (915) 268-3375
+                        <a href="tel:+17207306440" className="text-gray-900 font-medium hover:text-secondary transition-colors">
+                            720-730-6440
                         </a>
                         <p className="text-sm text-gray-500 mt-1">Call for Free Inspection</p>
                     </div>

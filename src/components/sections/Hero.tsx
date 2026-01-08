@@ -46,10 +46,10 @@ const Hero = ({
                     <Button
                         variant="secondary"
                         icon={FiPhone}
-                        href="tel:+19152683375"
+                        href="tel:+17207306440"
                         className="w-full sm:w-auto text-lg px-8 py-4"
                     >
-                        Call Now: (915) 268-3375
+                        Call Now: 720-730-6440
                     </Button>
                     <Button
                         variant="outline"

@@ -31,11 +31,11 @@ const InsuranceSlider = () => {
                     </h2>
                     <div className="flex justify-center">
                         <Button
-                            href="tel:+19152683375"
+                            href="tel:+17207306440"
                             variant="secondary"
                             className="text-lg px-8 py-3 uppercase font-bold"
                         >
-                            Call 24/7 (915) 268-3375
+                            Call 24/7 720-730-6440
                         </Button>
                     </div>
                 </div>

@@ -117,8 +117,8 @@ export default function BlogPost() {
                     <div className="bg-blue-50 border-l-4 border-secondary p-6 my-8 rounded-r-lg">
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Need Immediate Help?</h3>
                         <p className="mb-4 text-gray-700">Don't let water damage spread. Our 24/7 team is ready to deploy immediately.</p>
-                        <Button variant="primary" icon={FiPhone} href="tel:+19152683375">
-                            Call (915) 268-3375
+                        <Button variant="primary" icon={FiPhone} href="tel:+17207306440">
+                            Call 720-730-6440
                         </Button>
                     </div>
 

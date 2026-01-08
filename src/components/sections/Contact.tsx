@@ -89,7 +89,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                     <FiPhone className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
                                         <span className="block font-semibold text-lg">Phone</span>
-                                        <a href="tel:+19152683375" className="text-gray-400 hover:text-white transition-colors">(915) 268-3375</a>
+                                        <a href="tel:+17207306440" className="text-gray-400 hover:text-white transition-colors">720-730-6440</a>
                                     </div>
                                 </li>
 
@@ -153,7 +153,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                        placeholder="(915) 268-3375"
+                                        placeholder="720-730-6440"
                                     />
                                 </div>
                             </div>

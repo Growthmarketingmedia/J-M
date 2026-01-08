@@ -262,10 +262,10 @@ export default function DenverLocationPage() {
                                 <Button
                                     variant="secondary"
                                     icon={FiPhone}
-                                    href="tel:+19152683375"
+                                    href="tel:+17207306440"
                                     className="text-lg px-8 py-4"
                                 >
-                                    Call Now: (915) 268-3375
+                                    Call Now: 720-730-6440
                                 </Button>
                             </div>
                         </div>
@@ -313,13 +313,13 @@ export default function DenverLocationPage() {
                                 <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200">
                                     <h3 className="text-lg font-bold text-gray-900 mb-4">Contact Information</h3>
                                     <div className="space-y-4">
-                                        <a href="tel:+19152683375" className="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors">
+                                        <a href="tel:+17207306440" className="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors">
                                             <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
                                                 <FiPhone size={18} />
                                             </div>
                                             <div>
                                                 <div className="text-xs text-gray-500">Call Us</div>
-                                                <div className="font-semibold">(915) 268-3375</div>
+                                                <div className="font-semibold">720-730-6440</div>
                                             </div>
                                         </a>
                                         <a href="mailto:info@quick2restore.com" className="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors">

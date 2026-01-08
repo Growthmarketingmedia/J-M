@@ -1,33 +1,21 @@
 import React from 'react';
-import { FiPhone, FiClock, FiMapPin } from 'react-icons/fi';
+import { FiPhone } from 'react-icons/fi';
+import Container from '../ui/Container';
 
 const TopBar = () => {
     return (
-        <div className="bg-gray-900 text-white py-2 text-sm">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                    {/* Left side - Location */}
-                    <div className="flex items-center gap-2">
-                        <FiMapPin className="text-secondary" />
-                        <span>Colorado Springs, CO</span>
-                    </div>
-
-                    {/* Right side - Phone and Hours */}
-                    <div className="flex flex-wrap items-center gap-6">
-                        <div className="flex items-center gap-2">
-                            <FiClock className="text-secondary" />
-                            <span>24/7 Emergency Service</span>
-                        </div>
-                        <a
-                            href="tel:+19152683375"
-                            className="flex items-center gap-2 hover:text-secondary transition-colors"
-                        >
-                            <FiPhone className="text-secondary" />
-                            <span className="font-semibold">(915) 268-3375</span>
-                        </a>
-                    </div>
+        <div className="bg-[#DC2626] text-white py-2 text-sm font-medium relative z-50">
+            <Container>
+                <div className="flex items-center justify-center gap-2">
+                    <a
+                        href="tel:+17207306440"
+                        className="flex items-center gap-2 group hover:text-gray-100 transition-colors animate-pulse"
+                    >
+                        <FiPhone className="text-white" />
+                        <span className="font-bold text-sm sm:text-base">24/7 Emergency Service: 720-730-6440</span>
+                    </a>
                 </div>
-            </div>
+            </Container>
         </div>
     );
 };

@@ -27,11 +27,11 @@ const EmergencyBanner = () => {
 
                     <div className="flex-shrink-0">
                         <Button
-                            href="tel:+19152683375"
+                            href="tel:+17207306440"
                             className="!bg-white !text-red-600 hover:!bg-gray-100 hover:!text-red-700 text-xl px-10 py-5 shadow-lg border-2 border-transparent hover:border-red-200"
                             icon={FiPhone}
                         >
-                            (915) 268-3375
+                            720-730-6440
                         </Button>
                         <p className="mt-3 text-sm text-center md:text-right opacity-80">
                             Live dispatcher ready to take your call
