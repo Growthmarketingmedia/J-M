@@ -9,6 +9,15 @@ import { FiCalendar, FiClock, FiArrowRight } from 'react-icons/fi';
 
 const blogPosts = [
     {
+        title: 'What Includes Professional Water Damage Restoration in Colorado Springs',
+        excerpt: 'Water is one of the biggest problems that can happen to your house. Whether it’s caused by a busted pipe, a broken appliance, a heavy rainstorm...',
+        slug: '/our-blog/what-professional-water-damage-restoration-includes',
+        image: '/images/blogs/blog-jan.png',
+        date: 'January 15, 2026',
+        readTime: '7 min read',
+        category: 'Water Damage'
+    },
+    {
         title: 'Why Quick Response Matters: The Importance of 24/7 Water Damage Restoration',
         excerpt: 'Water damage is something that occurs every day, and the majority of the time, it will happen unexpectedly. Whether it occurs due to the unexpected failure of an appliance...',
         slug: '/f/why-quick-response-matters-the-importance-of-247-water-damage-r',
