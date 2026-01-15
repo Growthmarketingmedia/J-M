@@ -57,7 +57,8 @@ const Header = () => {
                     name: 'Denver',
                     href: '/denver-co-area',
                     submenu: [
-                        { name: 'Water Damage Restoration', href: '/denver-co-water-damage' }
+                        { name: 'Water Damage Restoration', href: '/denver-co-water-damage' },
+                        { name: 'Fire Damage Restoration', href: '/denver-co-area/fire-damage-restoration' }
                     ]
                 },
             ]
