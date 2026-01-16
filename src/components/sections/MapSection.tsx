@@ -8,10 +8,10 @@ const MapSection = () => {
                 <div className="text-center mb-12">
                     <p className="text-secondary font-semibold mb-2 uppercase tracking-wide text-sm">— VISIT US —</p>
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Find Us in <span className="text-primary">Seattle</span>
+                        Find Us in <span className="text-primary">Seattle & Tacoma</span>
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Serving Seattle, WA and surrounding Puget Sound communities
+                        Serving Seattle, Tacoma, and surrounding Puget Sound communities
                     </p>
                 </div>
 
@@ -34,7 +34,7 @@ const MapSection = () => {
                     {/* Address */}
                     <div className="bg-white rounded-xl p-6 shadow-md text-center">
                         <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">Address</h3>
-                        <p className="text-gray-900 font-medium">Seattle, WA</p>
+                        <p className="text-gray-900 font-medium">Seattle & Tacoma, WA</p>
                     </div>
 
                     {/* Phone */}

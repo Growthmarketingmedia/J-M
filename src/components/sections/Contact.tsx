@@ -32,7 +32,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                     <FiMapPin className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
                                         <span className="block font-semibold text-lg">Headquarters</span>
-                                        <span className="text-gray-400">Seattle, WA</span>
+                                        <span className="text-gray-400">Seattle & Tacoma, WA</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start">
