@@ -13,10 +13,10 @@ const Footer = () => {
                     <div>
                         <div className="relative h-20 w-64 mb-6">
                             <Image
-                                src="/images/transparentlogo.png"
+                                src="/images/j-m-logo.png"
                                 alt="J&M Restoration"
                                 fill
-                                className="object-contain object-left brightness-0 invert"
+                                className="object-contain object-left"
                             />
                         </div>
                         <p className="text-gray-400 mb-6">

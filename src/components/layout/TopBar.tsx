@@ -4,14 +4,14 @@ import Container from '../ui/Container';
 
 const TopBar = () => {
     return (
-        <div className="bg-[#DC2626] text-white py-2 text-sm font-medium relative z-50">
+        <div className="bg-gray-950 text-white py-2 text-sm font-medium relative z-50">
             <Container>
                 <div className="flex items-center justify-center gap-2">
                     <a
                         href="tel:+12065027712"
-                        className="flex items-center gap-2 group hover:text-gray-100 transition-colors animate-pulse"
+                        className="flex items-center gap-2 group hover:text-primary transition-colors animate-pulse"
                     >
-                        <FiPhone className="text-white" />
+                        <FiPhone className="text-primary" />
                         <span className="font-bold text-sm sm:text-base">24/7 Emergency Service: 206-502-7712</span>
                     </a>
                 </div>

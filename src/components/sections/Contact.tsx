@@ -82,14 +82,14 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                     <FiMapPin className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
                                         <span className="block font-semibold text-lg">Headquarters</span>
-                                        <span className="text-gray-400">Colorado Springs, CO</span>
+                                        <span className="text-gray-400">Seattle, WA</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start">
                                     <FiPhone className="text-secondary mt-1.5 mr-4 text-xl flex-shrink-0" />
                                     <div>
                                         <span className="block font-semibold text-lg">Phone</span>
-                                        <a href="tel:+17207306440" className="text-gray-400 hover:text-white transition-colors">720-730-6440</a>
+                                        <a href="tel:+12065027712" className="text-gray-400 hover:text-white transition-colors">206-502-7712</a>
                                     </div>
                                 </li>
 
@@ -153,7 +153,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                        placeholder="720-730-6440"
+                                        placeholder="206-502-7712"
                                     />
                                 </div>
                             </div>
@@ -168,10 +168,10 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white"
                                 >
                                     <option>Water Damage Restoration</option>
-                                    <option>Fire Damage Repair</option>
+                                    <option>Flood Cleanup</option>
+                                    <option>Sewage Removal</option>
+                                    <option>Structural Drying</option>
                                     <option>Mold Remediation</option>
-                                    <option>Flood Restoration</option>
-                                    <option>Storm Damage</option>
                                     <option>Other / General Inquiry</option>
                                 </select>
                             </div>
@@ -216,7 +216,7 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
 
 const Contact = ({
     title = "Get Fast, Reliable Restoration Services Today!",
-    description = "If your home or business has suffered damage, don't wait to act. Quick Response Restoration is the trusted name for Professional Restoration Services in Colorado Springs and is ready to help you recover quickly. Call us today and let our experienced team restore your property with skill and care."
+    description = "If your home or business has suffered water damage, don't wait to act. J&M Restoration Services is the trusted name for Emergency Water Restoration in Seattle & Tacoma and is ready to help you recover quickly. Call us today and let our experienced team restore your property with skill and care."
 }: ContactProps) => {
     return (
         <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}>
