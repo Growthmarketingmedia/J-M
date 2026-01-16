@@ -7,14 +7,14 @@ import Container from '../ui/Container';
 
 const testimonials = [
     {
-        text: "Thank you Ed and Joel and Quick Response Restoration crew. We couldn't be happier with their technical skills and the quality of their workmanship, as well as their communication throughout the project, such as updates and questions. They clearly provided a VERY AFFORDABLE detailed estimate for the restoration/repair. They kept us informed every step of the way and promptly addressed our questions or concerns, as well as the completed the job within the estimated timeframe. Again, thank you for your professional, Reliable, Efficient and outstanding work.",
+        text: "Thank you Ed and Joel and J&M Restoration Services crew. We couldn't be happier with their technical skills and the quality of their workmanship, as well as their communication throughout the project, such as updates and questions. They clearly provided a VERY AFFORDABLE detailed estimate for the restoration/repair. They kept us informed every step of the way and promptly addressed our questions or concerns, as well as the completed the job within the estimated timeframe. Again, thank you for your professional, Reliable, Efficient and outstanding work.",
         name: "Fred & Louise Deherrera",
         location: "Seattle & Tacoma, WA",
         rating: 5,
         service: "Restoration/Repair",
     },
     {
-        text: "Ed Osborne was able to come out and give me an estimate in a timely fashion. Once I decided to have his business do my job, he was able to schedule it within 2 working days. The job was needed for sale of a home and he took before and after photos as well as some of the actual residence proving the work was done. The mitigation report and photos that I was able to provide to the buyer has kept the closing date for the home on track. An otherwise stressful stressful situation has been eased by getting this job done without any problems. Thanks to Quick Response Restoration",
+        text: "Ed Osborne was able to come out and give me an estimate in a timely fashion. Once I decided to have his business do my job, he was able to schedule it within 2 working days. The job was needed for sale of a home and he took before and after photos as well as some of the actual residence proving the work was done. The mitigation report and photos that I was able to provide to the buyer has kept the closing date for the home on track. An otherwise stressful stressful situation has been eased by getting this job done without any problems. Thanks to J&M Restoration Services",
         name: "Gwendolyn Stokes",
         location: "Seattle & Tacoma, WA",
         rating: 5,
@@ -44,7 +44,7 @@ const testimonials = [
     {
         text: "Started 2025 with an overflowed upstairs toilet tank flooding my floors and ceiling and it was devastating to say the least and googled them. Joel was awesome and understanding. He was straight up honest, explained, and guided me through everything and explained why and taught me some home improvement tricks. He gave me and my fiancé peace of mind throughout the process. Even after the mitigation and restoration process and having issues with insurance, they helped me out and explaining the appraisal process and eventually only paying my deductible for the work they did. House is back to normal and highly recommend this company if you ever are in a situation with water damage to your house",
         name: "Juan Martinez",
-        location: "Colorado Springs, CO",
+        location: "Seattle & Tacoma, WA",
         rating: 5,
         service: "Water Damage Mitigation",
     },

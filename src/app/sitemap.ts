@@ -1,24 +1,15 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://quickresponserestoration.com'; // Replace with actual domain
+    const baseUrl = 'https://jmrestorationservices.com'; // Replace with actual domain when available
 
     const routes = [
         '',
-        '/albuquerque-santafe',
-        '/colorado-springs',
         '/contact-us',
-        '/denver',
-        '/denver-co-area',
-        '/denver-co-water-damage',
+        '/water-damage-restoration',
         '/fire-damage-restoration',
         '/mold-damage-restoration',
-        '/our-blog',
-        '/pueblo',
         '/reconstruction-services',
-        '/water-damage-restoration',
-        // Blog posts
-        '/f/why-quick-response-matters-the-importance-of-247-water-damage-r',
     ];
 
     return routes.map((route) => ({

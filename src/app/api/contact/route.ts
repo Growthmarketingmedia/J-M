@@ -31,7 +31,7 @@ export async function POST(request: Request) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: 'Quick Response Contact <contact@send.quick2restore.com>',
+            from: 'J&M Restoration Contact <contact@send.quick2restore.com>',
             to: ['joel.grubbs@quick2restore.com'],
             replyTo: email,
             subject: `New Contact Request: ${service}`,
