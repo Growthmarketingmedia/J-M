@@ -46,7 +46,7 @@ interface WhyChooseUsProps {
 
 const WhyChooseUs = ({
     title = "What Makes Us Different?",
-    description = "Choosing the right Restoration Company in Seattle can be the difference between a quick recovery and more extensive damage. At J&M Restoration Services, we are proud to be the team that homeowners and businesses rely on when a disaster strikes. Our skilled technicians' expertise in the process allows for the best results every time.",
+    description = "Choosing the right Restoration Company in Seattle & Tacoma can be the difference between a quick recovery and more extensive damage. At J&M Restoration Services, we are proud to be the team that homeowners and businesses rely on when a disaster strikes. Our skilled technicians' expertise in the process allows for the best results every time.",
     features = defaultFeatures,
     gridCols = 3
 }: WhyChooseUsProps) => {

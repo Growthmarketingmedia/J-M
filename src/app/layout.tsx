@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Professional Restoration Services Colorado Springs | Quick Response Restoration",
-  description: "Quick Response Restoration offers expert property restoration services in Colorado Springs, including water, fire, and mold damage recovery.",
+  title: "Professional Restoration Services Seattle & Tacoma | J&M Restoration Services",
+  description: "J&M Restoration Services offers expert property restoration services in Seattle & Tacoma, including water, fire, and mold damage recovery.",
 };
 
 export default function RootLayout({

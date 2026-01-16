@@ -60,7 +60,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <FiMapPin className="text-secondary mt-1 mr-3 flex-shrink-0" />
-                                <span className="text-gray-400">Seattle, WA</span>
+                                <span className="text-gray-400">Seattle & Tacoma, WA</span>
                             </li>
                             <li className="flex items-center">
                                 <FiPhone className="text-secondary mr-3 flex-shrink-0" />

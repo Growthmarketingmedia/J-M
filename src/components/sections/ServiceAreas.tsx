@@ -3,9 +3,9 @@ import { FiMapPin, FiArrowRight } from 'react-icons/fi';
 import Container from '../ui/Container';
 
 const locations = [
-    'New York City', 'Brooklyn', 'Queens', 'Manhattan',
-    'Bronx', 'Staten Island', 'Long Island', 'Westchester',
-    'Yonkers', 'New Rochelle', 'White Plains', 'Hempstead'
+    'Seattle', 'Tacoma', 'Bellevue', 'Kent',
+    'Renton', 'Federal Way', 'Auburn', 'Lakewood',
+    'Kirkland', 'Redmond', 'Sammamish', 'Shoreline'
 ];
 
 const ServiceAreas = () => {
@@ -15,7 +15,7 @@ const ServiceAreas = () => {
                 <div className="text-center mb-12">
                     <span className="text-primary font-semibold tracking-wider uppercase text-sm">Where We Work</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
-                        Serving 50+ Locations Across the Tri-State Area
+                        Serving Greater Seattle & Tacoma
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Our certified restoration teams are stationed throughout the region to ensure rapid response times, no matter where you are located.
