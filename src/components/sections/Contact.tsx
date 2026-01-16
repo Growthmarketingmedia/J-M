@@ -74,7 +74,6 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                         <Button
                             href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true"
                             variant="primary"
-                            size="lg"
                             className="w-full sm:w-auto text-xl px-12 py-5"
                             icon={FiCalendar}
                         >
