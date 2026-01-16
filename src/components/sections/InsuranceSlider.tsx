@@ -31,11 +31,12 @@ const InsuranceSlider = () => {
                     </h2>
                     <div className="flex justify-center">
                         <Button
-                            href="tel:+17207306440"
+                            href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true"
                             variant="secondary"
+                            icon={FiCalendar}
                             className="text-lg px-8 py-3 uppercase font-bold"
                         >
-                            Call 24/7 720-730-6440
+                            Book Now
                         </Button>
                     </div>
                 </div>

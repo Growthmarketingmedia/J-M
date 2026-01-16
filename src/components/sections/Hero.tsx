@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FiPhone, FiCheckCircle } from 'react-icons/fi';
+import { FiPhone, FiCheckCircle, FiCalendar } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
@@ -45,11 +45,11 @@ const Hero = ({
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                     <Button
                         variant="secondary"
-                        icon={FiPhone}
-                        href="tel:+12065027712"
+                        icon={FiCalendar}
+                        href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true"
                         className="w-full sm:w-auto text-lg px-8 py-4"
                     >
-                        Call Now: 206-502-7712
+                        Book Now
                     </Button>
                     <Button
                         variant="outline"

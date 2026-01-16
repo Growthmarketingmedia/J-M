@@ -5,7 +5,7 @@ import Container from '../ui/Container';
 
 const EmergencyBanner = () => {
     return (
-        <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-secondary to-primary text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
                 <FiAlertTriangle className="text-[30rem]" />
@@ -27,14 +27,14 @@ const EmergencyBanner = () => {
 
                     <div className="flex-shrink-0">
                         <Button
-                            href="tel:+17207306440"
-                            className="!bg-white !text-red-600 hover:!bg-gray-100 hover:!text-red-700 text-xl px-10 py-5 shadow-lg border-2 border-transparent hover:border-red-200"
-                            icon={FiPhone}
+                            href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true"
+                            className="!bg-white !text-orange-600 hover:!bg-gray-100 hover:!text-orange-700 text-xl px-10 py-5 shadow-lg border-2 border-transparent hover:border-orange-200"
+                            icon={FiCalendar}
                         >
-                            720-730-6440
+                            Book Now
                         </Button>
                         <p className="mt-3 text-sm text-center md:text-right opacity-80">
-                            Live dispatcher ready to take your call
+                            Book online for immediate response
                         </p>
                     </div>
                 </div>

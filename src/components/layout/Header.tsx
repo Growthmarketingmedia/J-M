@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { FiMenu, FiX, FiPhone, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX, FiPhone, FiChevronDown, FiCalendar } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 
@@ -83,8 +83,8 @@ const Header = () => {
 
                         {/* CTA Button */}
                         <div className="hidden md:block">
-                            <Button variant="secondary" icon={FiPhone} href="tel:+12065027712">
-                                Call Now: 206-502-7712
+                            <Button variant="secondary" icon={FiCalendar} href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true">
+                                Book Now
                             </Button>
                         </div>
 
@@ -115,8 +115,8 @@ const Header = () => {
                                     </Link>
                                 </div>
                             ))}
-                            <Button variant="secondary" icon={FiPhone} href="tel:+12065027712" className="w-full mt-4">
-                                206-502-7712
+                            <Button variant="secondary" icon={FiCalendar} href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true" className="w-full mt-4">
+                                Book Now
                             </Button>
                         </div>
                     )}
