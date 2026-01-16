@@ -14,13 +14,13 @@ const Footer = () => {
                         <div className="relative h-20 w-64 mb-6">
                             <Image
                                 src="/images/transparentlogo.png"
-                                alt="Quick Response Restoration"
+                                alt="J&M Restoration"
                                 fill
                                 className="object-contain object-left brightness-0 invert"
                             />
                         </div>
                         <p className="text-gray-400 mb-6">
-                            Leading restoration experts in Colorado Springs available 24/7 for water, fire, and mold emergencies. We restore your property and peace of mind.
+                            Leading restoration experts in Seattle & Tacoma available 24/7 for water, fire, and mold emergencies. We restore your property and peace of mind.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-secondary transition-colors"><FiFacebook size={20} /></a>
@@ -36,9 +36,9 @@ const Footer = () => {
                         <ul className="space-y-3">
                             <li><Link href="/" className="text-gray-400 hover:text-secondary">Home</Link></li>
                             <li><Link href="#services" className="text-gray-400 hover:text-secondary">Our Services</Link></li>
-                            <li><Link href="#locations" className="text-gray-400 hover:text-secondary">Service Areas</Link></li>
-                            <li><Link href="/our-blog" className="text-gray-400 hover:text-secondary">Our Blog</Link></li>
-                            <li><Link href="/contact-us" className="text-gray-400 hover:text-secondary">Contact Us</Link></li>
+                            <li><Link href="#why-choose-us" className="text-gray-400 hover:text-secondary">Why Choose Us</Link></li>
+                            <li><Link href="#process" className="text-gray-400 hover:text-secondary">Our Process</Link></li>
+                            <li><Link href="#contact" className="text-gray-400 hover:text-secondary">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -46,11 +46,11 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-6">Our Services</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/water-damage-restoration" className="text-gray-400 hover:text-secondary">Water Damage Restoration</Link></li>
-                            <li><Link href="/fire-damage-restoration" className="text-gray-400 hover:text-secondary">Fire Damage Restoration</Link></li>
-                            <li><Link href="/mold-damage-restoration" className="text-gray-400 hover:text-secondary">Mold Damage Restoration</Link></li>
-                            <li><Link href="/reconstruction-services" className="text-gray-400 hover:text-secondary">Reconstruction</Link></li>
-                            <li><Link href="/denver-co-water-damage" className="text-gray-400 hover:text-secondary">Denver Water Damage</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Water Extraction & Drying</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Sewage Cleanup</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Roof Leaks & Failures</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Structural Repair</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Appliance Leaks</Link></li>
                         </ul>
                     </div>
 
@@ -60,11 +60,11 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <FiMapPin className="text-secondary mt-1 mr-3 flex-shrink-0" />
-                                <span className="text-gray-400">Colorado Springs, CO</span>
+                                <span className="text-gray-400">Seattle, WA</span>
                             </li>
                             <li className="flex items-center">
                                 <FiPhone className="text-secondary mr-3 flex-shrink-0" />
-                                <a href="tel:+17207306440" className="text-gray-400 hover:text-secondary">720-730-6440</a>
+                                <a href="tel:+12065027712" className="text-gray-400 hover:text-secondary">206-502-7712</a>
                             </li>
                         </ul>
                     </div>

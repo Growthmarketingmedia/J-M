@@ -13,10 +13,10 @@ interface HeroProps {
 }
 
 const Hero = ({
-    title = <>From Ruin to Restoration: <br className="hidden md:block" /> <span>Professional Restoration Colorado Springs Services That Bring Properties Back to Life</span></>,
+    title = <>Specialized Water Damage <br className="hidden md:block" /> <span>& Restoration Services</span></>,
     subtitle,
     backgroundImage = "/images/herosection.webp",
-    description = "In a disaster, every moment counts. Quick Response Restoration provides reliable 24-hour-a-day service to restore your property as fast as possible. As a premier Property Restoration Company in Colorado Springs, we deploy our expertise, state-of-the-art technology, and skilled professionals to manage any emergency with efficiency and compassion.",
+    description = "Water damage can result from various sources such as floods, plumbing leaks, storms, and appliance malfunctions. J&M Restoration Services provides reliable 24/7 emergency response to restore your property in Seattle & Tacoma.",
     secondaryButtonHref = "#contact"
 }: HeroProps) => {
     return (
@@ -25,7 +25,7 @@ const Hero = ({
             <div className="absolute inset-0 z-0">
                 <Image
                     src={backgroundImage}
-                    alt="Restoration Services"
+                    alt="J&M Restoration Services"
                     fill
                     className="object-cover object-center brightness-[0.4]"
                     priority
@@ -46,10 +46,10 @@ const Hero = ({
                     <Button
                         variant="secondary"
                         icon={FiPhone}
-                        href="tel:+17207306440"
+                        href="tel:+12065027712"
                         className="w-full sm:w-auto text-lg px-8 py-4"
                     >
-                        Call Now: 720-730-6440
+                        Call Now: 206-502-7712
                     </Button>
                     <Button
                         variant="outline"

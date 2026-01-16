@@ -8,11 +8,11 @@ const TopBar = () => {
             <Container>
                 <div className="flex items-center justify-center gap-2">
                     <a
-                        href="tel:+17207306440"
+                        href="tel:+12065027712"
                         className="flex items-center gap-2 group hover:text-gray-100 transition-colors animate-pulse"
                     >
                         <FiPhone className="text-white" />
-                        <span className="font-bold text-sm sm:text-base">24/7 Emergency Service: 720-730-6440</span>
+                        <span className="font-bold text-sm sm:text-base">24/7 Emergency Service: 206-502-7712</span>
                     </a>
                 </div>
             </Container>
