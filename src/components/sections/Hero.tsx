@@ -30,7 +30,7 @@ const Hero = ({
                     className="object-cover object-center brightness-[0.4]"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-900/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#272725]/80 via-transparent to-[#272725]/40" />
             </div>
 
             <Container className="relative z-10 text-center text-white">

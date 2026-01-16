@@ -57,10 +57,10 @@ const Header = () => {
                             {/* Placeholder for logo - using text if image fails or for SEO */}
                             <div className="relative h-16 w-64">
                                 <Image
-                                    src="/images/transparentlogo.png"
+                                    src="/images/j-m-logo.png"
                                     alt="J&M Restoration"
                                     fill
-                                    className={`object-contain object-left ${shouldShowSolidHeader ? '' : 'brightness-0 invert'}`}
+                                    className="object-contain object-left"
                                     priority
                                 />
                             </div>
