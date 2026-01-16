@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
-import { FiPhone } from 'react-icons/fi';
+import { FiPhone, FiCalendar } from 'react-icons/fi';
 
 const insuranceLogos = [
     { name: 'Liberty Mutual', src: '/images/insurance/190926-libertymutuallogo-submitted-1__1_-removebg-preview.png' },
