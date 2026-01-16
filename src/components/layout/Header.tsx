@@ -48,7 +48,7 @@ const Header = () => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 flex flex-col">
             <TopBar />
-            <div className={`transition-all duration-300 w-full ${shouldShowSolidHeader ? 'bg-white shadow-md py-2' : 'bg-white/30 backdrop-blur-md border-b border-white/30 py-4'
+            <div className={`transition-all duration-300 w-full ${shouldShowSolidHeader ? 'bg-[#272725] shadow-md py-2' : 'bg-white/30 backdrop-blur-md border-b border-white/30 py-4'
                 }`}>
                 <Container>
                     <div className="flex items-center justify-between">
@@ -72,7 +72,7 @@ const Header = () => {
                                 <div key={link.name} className="relative group">
                                     <Link
                                         href={link.href}
-                                        className={`text-base font-medium transition-colors hover:text-secondary ${shouldShowSolidHeader ? 'text-gray-700' : 'text-gray-900 md:text-white'
+                                        className={`text-base font-medium transition-colors hover:text-secondary ${shouldShowSolidHeader ? 'text-white' : 'text-gray-900 md:text-white'
                                             }`}
                                     >
                                         {link.name}
@@ -94,21 +94,21 @@ const Header = () => {
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
                             {isMobileMenuOpen ? (
-                                <FiX className={shouldShowSolidHeader ? 'text-gray-900' : 'text-white'} />
+                                <FiX className={shouldShowSolidHeader ? 'text-white' : 'text-white'} />
                             ) : (
-                                <FiMenu className={shouldShowSolidHeader ? 'text-gray-900' : 'text-white'} />
+                                <FiMenu className={shouldShowSolidHeader ? 'text-white' : 'text-white'} />
                             )}
                         </button>
                     </div>
 
                     {/* Mobile Menu */}
                     {isMobileMenuOpen && (
-                        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4 flex flex-col space-y-4 max-h-[80vh] overflow-y-auto">
+                        <div className="md:hidden absolute top-full left-0 right-0 bg-[#272725] shadow-lg p-4 flex flex-col space-y-4 max-h-[80vh] overflow-y-auto">
                             {navLinks.map((link) => (
                                 <div key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className="block text-gray-900 hover:text-secondary font-medium pb-2 border-b border-gray-100 last:border-0"
+                                        className="block text-white hover:text-secondary font-medium pb-2 border-b border-gray-700 last:border-0"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.name}
