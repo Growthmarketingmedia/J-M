@@ -18,7 +18,7 @@ const EmergencyBanner = () => {
                             Emergency? We're Available 24/7!
                         </h2>
                         <p className="text-xl md:text-2xl font-light text-orange-100 mb-2">
-                            Water • Fire • Mold • Storm Damage
+                            Water Damage • Flood Cleanup • Sewage Removal
                         </p>
                         <p className="font-semibold bg-white/20 inline-block px-4 py-1 rounded-full">
                             Average Response Time: Under 60 Minutes

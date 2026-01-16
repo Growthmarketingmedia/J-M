@@ -46,11 +46,11 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-6">Our Services</h3>
                         <ul className="space-y-3">
-                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Water Extraction & Drying</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Water Extraction</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Structural Drying</Link></li>
                             <li><Link href="#services" className="text-gray-400 hover:text-secondary">Sewage Cleanup</Link></li>
-                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Roof Leaks & Failures</Link></li>
-                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Structural Repair</Link></li>
-                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Appliance Leaks</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Flood Damage Repair</Link></li>
+                            <li><Link href="#services" className="text-gray-400 hover:text-secondary">Emergency Water Removal</Link></li>
                         </ul>
                     </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                    <p>&copy; {new Date().getFullYear()} Quick Response Restoration. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} J&M Restoration Services. All rights reserved.</p>
                 </div>
             </Container>
         </footer>

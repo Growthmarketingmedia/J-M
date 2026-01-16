@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiDroplet, FiWind, FiTrash2, FiHome } from 'react-icons/fi';
 import Container from '../ui/Container';
 
 export interface ServiceItem {
@@ -13,28 +13,28 @@ export interface ServiceItem {
 
 const defaultServices: ServiceItem[] = [
     {
-        title: 'Water Damage Restoration',
-        description: 'Water damage occurs quickly, leading to structural damage and health risks. Our team will determine where the water is coming from, extract the standing water, and deploy the latest drying technology to remove the moisture. We follow this process with all secondary issues associated with water damage, such as odor and mold.',
-        image: '/images/water/water-damage-restoration-5.png',
-        link: '/water-damage-restoration',
+        title: 'Water Extraction & Cleanup',
+        description: 'Immediate removal of standing water using industrial-grade pumps and vacuums to prevent further damage to flooring and structural elements.',
+        image: '/images/water/water-damage-restoration-1.png',
+        link: '#services',
     },
     {
-        title: 'Fire & Smoke Damage Restoration',
-        description: 'Fire damage is a long-lasting outcome; in addition to property damage, there are fire losses represented, such as smoke and residue. Our specialists will handle debris removal, extensive cleaning, odor neutralization, etc. We highlight hidden damage that soot and corrosion cause to a safe, clean, and structurally sound environment for habitation.',
-        image: '/images/Fire/fire-damage-restoration-3.png',
-        link: '/fire-damage-restoration',
+        title: 'Structural Drying',
+        description: 'Advanced drying techniques using dehumidifiers and air movers to eliminate moisture from walls, floors, and hard-to-reach areas.',
+        image: '/images/water/water-damage-restoration-2.png',
+        link: '#services',
     },
     {
-        title: 'Mold Removal & Remediation',
-        description: 'Unchecked mold can spread rapidly and cause long-term issues to your property and your health. Our certified specialists use best practice containment, removal, and remediation methods to effectively eliminate mold from its source. We will implement moisture control strategies to limit the likelihood of the mold returning.',
-        image: '/images/mold/mold-remediation-3.png',
-        link: '/mold-damage-restoration',
+        title: 'Sewage Cleanup',
+        description: 'Safe and sanitary removal of biohazardous sewage water, followed by thorough disinfection and deodorization of the affected area.',
+        image: '/images/water/water-damage-restoration-3.png',
+        link: '#services',
     },
     {
-        title: 'Reconstruction & Structural Repairs',
-        description: 'Structural repair often includes more than just cleanup. Our experienced construction team will repair or replace damaged areas to restore strength, safety, and aesthetic appeal to your property. From drywall, flooring to reconstruction, we will manage all areas of structural repair of the property.',
-        image: '/images/reconstruction/reconstruction-service-3.png',
-        link: '/reconstruction-services',
+        title: 'Flood Damage Repair',
+        description: 'Comprehensive restoration services for storm and flood damage, restoring your property from the ground up to its pre-loss condition.',
+        image: '/images/water/water-damage-restoration-6.png',
+        link: '#services',
     },
 ];
 
@@ -45,8 +45,8 @@ interface ServicesProps {
 }
 
 const Services = ({
-    title = "Our Restoration Services",
-    description = "As a premier Property Restoration Specialist in Colorado Springs, we provide a complete range of solutions to restore your property quickly and efficiently. From flooding due to a broken pipe, mold after long-term moisture, and fire and smoke damage, we have the experience and proper equipment to provide the restoration needed.",
+    title = "Our Water Damage Restoration Services",
+    description = "As a premier Water Damage Restoration Specialist in Seattle & Tacoma, we provide a complete range of solutions to restore your property quickly and efficiently. From flooding due to a broken pipe to sewage backup, we have the experience and proper equipment to handle any water emergency.",
     services = defaultServices
 }: ServicesProps) => {
     return (

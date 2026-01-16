@@ -13,7 +13,7 @@ const defaultFeatures: FeatureItem[] = [
     {
         icon: FiClock,
         title: '24/7 Emergency Response',
-        description: 'Disasters never come when they are supposed to. And our team is always ready 24/7, day or night, to respond to your emergency restoration needs in Colorado Springs. Our technicians\' preparedness, quick dispatch system, and availability reduce damage and begin recovery at the time of most need.',
+        description: 'Disasters never come when they are supposed to. And our team is always ready 24/7, day or night, to respond to your water emergency in Seattle & Tacoma. Our technicians\' preparedness, quick dispatch system, and availability reduce damage and begin recovery at the time of most need.',
     },
     {
         icon: FiAward,
@@ -46,7 +46,7 @@ interface WhyChooseUsProps {
 
 const WhyChooseUs = ({
     title = "What Makes Us Different?",
-    description = "Choosing the right Restoration Company in Colorado Springs can be the difference between a quick recovery and more extensive damage. At Quick Response Restoration, we are proud to be the team that homeowners and businesses rely on when a disaster strikes. Our skilled technicians' expertise in the process allows for the best results every time.",
+    description = "Choosing the right Restoration Company in Seattle can be the difference between a quick recovery and more extensive damage. At J&M Restoration Services, we are proud to be the team that homeowners and businesses rely on when a disaster strikes. Our skilled technicians' expertise in the process allows for the best results every time.",
     features = defaultFeatures,
     gridCols = 3
 }: WhyChooseUsProps) => {

@@ -5,23 +5,23 @@ import Container from '../ui/Container';
 const steps = [
     {
         icon: FiPhoneCall,
-        title: '1. Emergency Response & Inspection',
-        description: 'Our team responds promptly to assess the situation and contain any immediate hazards. During the inspection, we identify all areas affected by the damage and develop a targeted restoration plan tailored to your property\'s unique needs.',
+        title: '1. Emergency Response',
+        description: 'Call us 24/7 at 206-502-7712. Our team responds immediately to assess the situation and contain water damage preventing further spread.',
     },
     {
         icon: FiClipboard,
-        title: '2. Water Extraction & Drying (if applicable)',
-        description: 'If water damage is involved, we use industrial-grade pumps and dehumidifiers to remove standing water and moisture. This step is critical in preventing secondary damage such as mold growth, structural weakening, and long-term indoor air quality issues.',
+        title: '2. Assessment & Extraction',
+        description: 'We identify the source of the leak, assess the extent of damage, and immediately begin extracting standing water using commercial pumps.',
     },
     {
         icon: FiRefreshCw,
-        title: '3. Cleaning & Sanitization',
-        description: 'We thoroughly clean, disinfect, and deodorize all affected surfaces, materials, and belongings. This ensures a safe and healthy environment, free from contaminants, odors, and potential allergens that may linger after the initial damage has been addressed.',
+        title: '3. Drying & Dehumidification',
+        description: 'We deploy industrial-grade air movers and dehumidifiers to thoroughly dry walls, carpets, and subfloors, monitoring moisture levels daily.',
     },
     {
         icon: FiCheckSquare,
-        title: '4. Restoration & Repairs',
-        description: 'The final stage focuses on returning your property to its original condition. From rebuilding damaged structures to repainting and finishing details, we handle all necessary repairs to restore comfort, functionality, and value to your space.',
+        title: '4. Restoration',
+        description: 'Once dry, we repair any structural damage, ensuring your property is fully restored to its pre-loss condition, clean and safe.',
     },
 ];
 
@@ -32,7 +32,7 @@ const Process = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Our Process Works</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        At Quick Response Restoration, our approach is designed to make recovery as efficient and stress-free as possible. We follow a structured process that ensures every detail is addressed and your property is restored thoroughly from start to finish.
+                        At J&M Restoration Services, our approach is designed to make recovery as efficient and stress-free as possible. We follow a structured process that ensures every detail is addressed and your property is restored thoroughly from start to finish.
                     </p>
                 </div>
 
