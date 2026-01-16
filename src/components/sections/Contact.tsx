@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
-import { FiMapPin, FiPhone, FiMail, FiClock, FiSend } from 'react-icons/fi';
+import { FiMapPin, FiPhone, FiMail, FiClock, FiSend, FiCalendar } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -12,56 +12,6 @@ interface ContactProps {
 }
 
 const ContactFormContent = ({ title, description }: ContactProps) => {
-    const { executeRecaptcha } = useGoogleReCaptcha();
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        service: 'Water Damage',
-        message: '',
-    });
-
-    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = useCallback(async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (!executeRecaptcha) {
-            console.log('Execute recaptcha not yet available');
-            return;
-        }
-
-        setStatus('submitting');
-
-        try {
-            const token = await executeRecaptcha('contact_form_submit');
-
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ ...formData, token }),
-            });
-
-            if (response.ok) {
-                setStatus('success');
-                setFormData({ name: '', email: '', phone: '', service: 'Water Damage', message: '' });
-                setTimeout(() => setStatus('idle'), 5000);
-            } else {
-                setStatus('error');
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            setStatus('error');
-        }
-    }, [executeRecaptcha, formData]);
-
     return (
         <section id="contact" className="py-20 bg-gray-50">
             <Container>
@@ -104,7 +54,6 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                         </div>
 
                         <div className="mt-12">
-                            {/* Embed map or extra info could go here */}
                             <div className="p-6 bg-gray-800 rounded-xl">
                                 <p className="text-sm text-gray-300 italic">
                                     "Fastest response time in the industry. We are here when you need us most."
@@ -113,100 +62,27 @@ const ContactFormContent = ({ title, description }: ContactProps) => {
                         </div>
                     </div>
 
-                    {/* Contact Form */}
-                    <div className="p-10 md:p-14">
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        required
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                        placeholder="John Doe"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        required
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                        placeholder="john@example.com"
-                                    />
-                                </div>
-                                <div className="md:col-span-2">
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        required
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                                        placeholder="206-502-7712"
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
-                                <select
-                                    id="service"
-                                    name="service"
-                                    value={formData.service}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white"
-                                >
-                                    <option>Water Damage Restoration</option>
-                                    <option>Flood Cleanup</option>
-                                    <option>Sewage Removal</option>
-                                    <option>Structural Drying</option>
-                                    <option>Mold Remediation</option>
-                                    <option>Other / General Inquiry</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows={4}
-                                    required
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
-                                    placeholder="Tell us about the damage..."
-                                ></textarea>
-                            </div>
-
-                            <div className="pt-2">
-                                <Button
-                                    type="submit"
-                                    className={`w-full text-lg ${status === 'success' ? 'bg-success hover:bg-green-600' : ''}`}
-                                    icon={status === 'success' ? undefined : FiSend}
-                                    variant={status === 'success' ? 'primary' : 'primary'} // Visual feedback handled by className
-                                // disabled={status === 'submitting' || status === 'success'}
-                                >
-                                    {status === 'submitting' ? 'Sending...' : status === 'success' ? 'Message Sent!' : 'Send Message'}
-                                </Button>
-                                {status === 'success' && (
-                                    <p className="text-center text-success mt-3 font-medium animate-pulse">
-                                        Thank you! We'll be in touch shortly.
-                                    </p>
-                                )}
-                            </div>
-                        </form>
+                    {/* CTA Section */}
+                    <div className="p-10 md:p-14 flex flex-col items-center justify-center text-center">
+                        <div className="mb-8">
+                            <FiCalendar className="text-6xl text-primary mx-auto mb-4" />
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Ready to Book?</h3>
+                            <p className="text-gray-600">
+                                Schedule your water damage inspection or service instantly using our online booking system.
+                            </p>
+                        </div>
+                        <Button
+                            href="https://book.housecallpro.com/book/JM-Carpet-Renewal/0ff6fe1ee579499786882b3af2ef02d0?v2=true"
+                            variant="primary"
+                            size="lg"
+                            className="w-full sm:w-auto text-xl px-12 py-5"
+                            icon={FiCalendar}
+                        >
+                            Book Now
+                        </Button>
+                        <p className="mt-4 text-sm text-gray-500">
+                            Available 24/7 for emergency water restoration.
+                        </p>
                     </div>
                 </div>
             </Container>

@@ -51,13 +51,6 @@ const Hero = ({
                     >
                         Book Now
                     </Button>
-                    <Button
-                        variant="outline"
-                        href={secondaryButtonHref}
-                        className="w-full sm:w-auto text-lg px-8 py-4"
-                    >
-                        Get Free Quote
-                    </Button>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-gray-100">
